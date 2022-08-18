@@ -18,13 +18,6 @@ function startTimer() {
   timer = setInterval(function () {
     document.getElementById("seconds").textContent = seconds;
     seconds--;
-    if (document.getElementById("cardcontainer").innerHTML == "") {
-      document.getElementById(
-        "cardcontainer"
-      ).innerHTML = `<span id="noResultText">No Result Found</span>`;
-      clearInterval(timer);
-    }
-
     if (seconds == -1) {
       document.getElementById(
         "timertext"
@@ -78,7 +71,14 @@ function searchNews() {
 
       page = page + 1;
     })
-    .catch((error) => console.log("article not found"));
+    .catch((error) => {
+      if (document.getElementById("cardcontainer").innerHTML == "") {
+        document.getElementById(
+          "cardcontainer"
+        ).innerHTML = `<span id="noResultText">No Result Found</span>`;
+        clearInterval(timer);
+      }
+    });
 }
 // SEARCH FUNCTIONALITY ENDS HERE
 
