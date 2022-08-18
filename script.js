@@ -1,9 +1,5 @@
-// CALLING FUNCTION
-function search() {
-  query = document.getElementById("searcharticle").value;
-  if (query != "") window.location.href = `?query=${query}`;
-  else document.getElementById("searchbtn").disabled = true;
-}
+let oldcard = document.getElementById("card");
+let page = 1;
 
 function searchCall() {
   document.getElementById("cardcontainer").innerHTML = "";
@@ -32,20 +28,25 @@ function startTimer() {
   }, 1000);
 }
 
+// CALLING FUNCTION
+function search() {
+  query = document.getElementById("searcharticle").value;
+  if (query != "") window.location.href = `?query=${query}`;
+  else document.getElementById("searchbtn").disabled = true;
+}
+
 //SEARCH FUNCTIONALITY STARTS HERE
-let oldcard = document.getElementById("card");
-let page = 1;
 let filter = "value";
 
 const urlParams = new URLSearchParams(window.location.search);
 filter = urlParams.get("query");
+console.log(myParam);
 
 if (filter != "value") {
   document.getElementById("searcharticle").value = filter;
   searchCall();
   startTimer();
 }
-
 function searchNews() {
   fetch(`https://saurav.tech/NewsAPI/top-headlines/category/${filter}/in.json`)
     .then((res) => res.json())
@@ -75,7 +76,6 @@ function searchNews() {
 // SEARCH FUNCTIONALITY ENDS HERE
 
 // LAZY LOADING FUNCTIONALITY
-
 var mq = window.matchMedia("(max-width: 820px) and (min-width: 480px)");
 let lazycontainer = document.getElementById("cardcontainer");
 let percent = 0;
