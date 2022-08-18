@@ -34,6 +34,12 @@ function search() {
   window.location.href = `?query=${query}`;
 }
 
+document.getElementById("searcharticle").onkeydown = (e) => {
+  if (e.key === "Enter") {
+    document.getElementById("searchbtn").click();
+  }
+};
+
 //SEARCH FUNCTIONALITY STARTS HERE
 let filter;
 
