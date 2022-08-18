@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://icon-library.com/images/in-the-news-icon/in-the-news-icon-10.jpg"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <title>Document</title>
+  </head>
+  <header><span id="heading">Latest News Search</span></header>
+  <body>
+    <div id="container">
+      <p id="timertext">Auto refresh in <span id="seconds">30</span> seconds</p>
+      <div id="searchcontainer">
+        <div id="searchbar">
+          <input
+            type="text"
+            id="searcharticle"
+            placeholder=" Search Articles..."
+            name="search"
+          />
+        </div>
+        <div id="searchbutton">
+          <button id="searchbtn" onclick="search()">
+            <i class="fa fa-search" style="font-size: 18px; color: white"> </i>
+          </button>
+        </div>
+      </div>
+      <div id="cardcontainer">
+        <div id="card">
+          <div id="imgcontainer" style="margin-right: 1rem">
+            <img
+              id="imgid"
+              src="https://1office.co/wp-content/uploads/2019/02/photodune-9262934-latest-news-blue-3d-realistic-paper-speech-bubble-s.jpg"
+              alt="img not available"
+              style="width: auto; height: 100%; border-radius: 5px"
+            />
+          </div>
+          <div id="newsdata" style="margin-right: 0.5rem">
+            <h2
+              style="
+                margin-top: 0.2rem;
+                font-size: 1.5vw;
+                font-family: 'Open Sans', sans-serif;
+              "
+            >
+              Available categories which can be searched
+            </h2>
+            <h4
+              style="
+                margin-top: 0.2rem;
+                font-size: 1.2vw;
+                font-family: 'Open Sans', sans-serif;
+              "
+            >
+              business, entertainment, general, health, science,<br />
+              sports and technology
+            </h4>
+            <p style="margin-bottom: 1rem; margin-top: 0.2rem">
+              <a
+                id="readmorebtn"
+                style="
+                  color: blue;
+                  font-size: 1.2vw;
+                  font-weight: bold;
+                  text-decoration: none;
+                  font-family: 'Open Sans', sans-serif;
+                "
+                href="https://documenter.getpostman.com/view/3479169/Szf7zncp?version=latest"
+                target="_blank"
+                >Read more</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="script.js"></script>
+</html>
