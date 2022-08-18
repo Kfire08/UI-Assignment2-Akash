@@ -1,5 +1,5 @@
 # LATEST NEWS SEARCH
-Link to deployed website: https://kfire08.github.io/UI-Assignment2-Akash/
+Link to the deployed website: https://kfire08.github.io/UI-Assignment2-Akash/
 ## Design
 <br/>
 <img width="633" alt="Screenshot (18)" src="https://user-images.githubusercontent.com/43553695/185474605-dc5651d2-ae3b-4a41-aa80-caf558101a17.png">
