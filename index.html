@@ -15,12 +15,15 @@
       rel="stylesheet"
     />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <title>Document</title>
+    <title>Latest News Search</title>
   </head>
-  <header><span id="heading">Latest News Search</span></header>
+
   <body>
+    <header><span id="heading">Latest News Search</span></header>
+
     <div id="container">
       <p id="timertext">Auto refresh in <span id="seconds">30</span> seconds</p>
+
       <div id="searchcontainer">
         <div id="searchbar">
           <input
@@ -36,46 +39,25 @@
           </button>
         </div>
       </div>
+
       <div id="cardcontainer">
         <div id="card">
-          <div id="imgcontainer" style="margin-right: 1rem">
+          <div id="imgcontainer">
             <img
               id="imgid"
               src="https://1office.co/wp-content/uploads/2019/02/photodune-9262934-latest-news-blue-3d-realistic-paper-speech-bubble-s.jpg"
               alt="img not available"
-              style="width: auto; height: 100%; border-radius: 5px"
             />
           </div>
-          <div id="newsdata" style="margin-right: 0.5rem">
-            <h2
-              style="
-                margin-top: 0.2rem;
-                font-size: 1.5vw;
-                font-family: 'Open Sans', sans-serif;
-              "
-            >
-              Available categories which can be searched
-            </h2>
-            <h4
-              style="
-                margin-top: 0.2rem;
-                font-size: 1.2vw;
-                font-family: 'Open Sans', sans-serif;
-              "
-            >
+          <div id="newsdata">
+            <h2>Available categories which can be searched</h2>
+            <h4>
               business, entertainment, general, health, science,<br />
               sports and technology
             </h4>
             <p style="margin-bottom: 1rem; margin-top: 0.2rem">
               <a
                 id="readmorebtn"
-                style="
-                  color: blue;
-                  font-size: 1.2vw;
-                  font-weight: bold;
-                  text-decoration: none;
-                  font-family: 'Open Sans', sans-serif;
-                "
                 href="https://documenter.getpostman.com/view/3479169/Szf7zncp?version=latest"
                 target="_blank"
                 >Read more</a
