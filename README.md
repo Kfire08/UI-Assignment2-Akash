@@ -1,13 +1,12 @@
 # LATEST NEWS SEARCH
 Link to deployed website: https://kfire08.github.io/UI-Assignment2-Akash/
-<br/>
 ## Design
 <br/>
-![image](https://user-images.githubusercontent.com/43553695/185472492-7f833690-8694-4420-abe8-a4c8f19e62d0.png)
-<br/>
+<img width="633" alt="Screenshot (18)" src="https://user-images.githubusercontent.com/43553695/185474605-dc5651d2-ae3b-4a41-aa80-caf558101a17.png">
+<br/><br/>
 
 Tech Used: HTML, CSS and Javascript
-<br/>
+<br/><br>
 Features of the website:
 <br/>
 1. Two card layout for tablet. Single card layout for desktop and mobile.
