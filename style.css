@@ -145,6 +145,7 @@ h4 {
 #noResultText {
   margin: 1rem auto;
   display: block;
+  text-align: center;
   font-family: "Open Sans", sans-serif;
 }
 /* MEDIA QUERY FOR DESKTOP SCREEN SIZE */

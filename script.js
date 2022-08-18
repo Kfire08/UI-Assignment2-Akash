@@ -1,10 +1,12 @@
 let oldcard = document.getElementById("card");
 let page = 1;
+
 function searchCall() {
   document.getElementById("cardcontainer").innerHTML = "";
   searchNews();
 }
-// countdown 30 second reload
+
+// REFRESH FUNCTIONALITY
 var timer;
 function resetTimer() {
   clearInterval(timer);
@@ -15,12 +17,14 @@ function startTimer() {
   var seconds = 30;
   timer = setInterval(function () {
     document.getElementById("seconds").textContent = seconds;
-    if (document.getElementById("cardcontainer").innerHTML != "") seconds--;
-    else {
+    seconds--;
+    if (document.getElementById("cardcontainer").innerHTML == "") {
       document.getElementById(
         "cardcontainer"
       ).innerHTML = `<span id="noResultText">No Result Found</span>`;
+      clearInterval(timer);
     }
+
     if (seconds == -1) {
       document.getElementById(
         "timertext"
@@ -31,17 +35,19 @@ function startTimer() {
   }, 1000);
 }
 
+// CALLING FUNCTION
 function search() {
   query = document.getElementById("searcharticle").value;
-  if (query != "") window.location.href = `?query=${query}`;
-  else document.getElementById("searchbtn").disabled = true;
+  window.location.href = `?query=${query}`;
 }
-//SEARCH FUNCTION STARTS HERE
-let filter = "value";
-let filterIndex = document.URL.indexOf("=");
-if (filterIndex > -1) {
-  filter = document.URL.substring(filterIndex + 1);
-}
+
+//SEARCH FUNCTIONALITY STARTS HERE
+let filter;
+
+const urlParams = new URLSearchParams(window.location.search);
+filter = urlParams.get("query");
+
+if (filter == null || filter == "") filter = "value";
 
 if (filter != "value") {
   document.getElementById("searcharticle").value = filter;
@@ -74,9 +80,9 @@ function searchNews() {
     })
     .catch((error) => console.log("article not found"));
 }
-// SEARCH FUNCTION ENDS HERE
+// SEARCH FUNCTIONALITY ENDS HERE
 
-//Lazy load
+// LAZY LOADING FUNCTIONALITY
 var mq = window.matchMedia("(max-width: 820px) and (min-width: 480px)");
 let lazycontainer = document.getElementById("cardcontainer");
 let percent = 0;
@@ -89,4 +95,3 @@ lazycontainer.addEventListener("scroll", () => {
   if (lazycontainer.scrollTop > percent * lazycontainer.scrollHeight)
     searchNews();
 });
-// Trigger fetch by Enter key press (Enter key ID = 13)
