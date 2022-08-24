@@ -14,5 +14,4 @@ Features of the website:
 3. Refresh option to see new content every 30 seconds.
 4. Infinite scroll feature for news cards.
 <br/>
-<br/>
 #### Note: While running the infinite scroll you might observe repeating news because news items are running on loop as there is limited content in the API which I am using here for testing purpose. The APIs which provide more content have limited hits and that might make the website unusable if the number of hits are reached.
