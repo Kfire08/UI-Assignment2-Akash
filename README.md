@@ -1,5 +1,7 @@
 # LATEST NEWS SEARCH
 Link to the deployed website: https://kfire08.github.io/UI-Assignment2-Akash/
+<br/>
+To see the demo of the website you can visit the above url and to run the project on local machine just download the repository, extract the files and keep them in single folder and then run it from "index.html" file in the browser of your choice.
 ## Design
 <br/>
 <img width="633" alt="Screenshot (18)" src="https://user-images.githubusercontent.com/43553695/185474605-dc5651d2-ae3b-4a41-aa80-caf558101a17.png">
@@ -14,4 +16,4 @@ Features of the website:
 3. Refresh option to see new content every 30 seconds.
 4. Infinite scroll feature for news cards.
 
-#### Note:While running the infinite scroll you might observe repeating news because news items are running on loop as there is limited content in the API which I am using here for testing purpose. The APIs which provide more content have limited hits and that might make the website unusable if the number of hits are reached.
+#### Note: While running the infinite scroll you might observe repeating news because news items are running on loop as there is limited content in the API which I am using here for testing purpose. The APIs which provide more content have limited hits and that might make the website unusable if the number of hits are reached.
