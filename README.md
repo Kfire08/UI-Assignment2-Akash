@@ -1,6 +1,6 @@
 # LATEST NEWS SEARCH
 Link to the deployed website: https://kfire08.github.io/UI-Assignment2-Akash/
-<br/>
+<br/><br/>
 To see the demo of the website you can visit the above url and to run the project on local machine just download the repository, extract the files and keep them in single folder and then run it from "index.html" file in the browser of your choice.
 ## Design
 <br/>
