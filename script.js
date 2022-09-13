@@ -53,7 +53,7 @@ if (filter != "value") {
   searchCall();
 }
 function searchNews() {
-  fetch(`https://saurav.tech/NewsAPI/top-headlines/category/${filter}/in.json`)
+  fetch(`https://inshorts.deta.dev/news?category=${filter}`)
     .then((res) => res.json())
     .then((data) => {
       for (var i = 1; i < 11; i++) {
