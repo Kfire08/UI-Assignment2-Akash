@@ -60,16 +60,16 @@ function searchNews() {
         let newcard = oldcard.cloneNode(true);
 
         newcard.childNodes[1].childNodes[1].src =
-          data.articles[i * page].urlToImage;
+          data.data[i * page].imageUrl;
 
         newcard.childNodes[3].childNodes[1].innerText =
-          data.articles[i * page].title;
+          data.data[i * page].title;
 
         newcard.childNodes[3].childNodes[3].innerText =
-          data.articles[i * page].description;
+          data.data[i * page].content;
 
         newcard.childNodes[3].childNodes[5].childNodes[1].href =
-          data.articles[i * page].url;
+          data.data[i * page].readMoreUrl;
 
         document.getElementById("cardcontainer").appendChild(newcard);
       }
