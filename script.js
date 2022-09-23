@@ -33,19 +33,6 @@ function search() {
   query = document.getElementById("searcharticle").value.toLowerCase();
   window.location.href = `?query=${query}`;
 }
-function myFunction() {
-  var copyText = document.getElementById("searcharticle");
-
-  // Select the text field
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); // For mobile devices
-
-  // Copy the text inside the text field
-  navigator.clipboard.writeText(copyText.value);
-
-  // Alert the copied text
-  alert("Copied the text: " + copyText.value);
-}
 
 document.getElementById("searcharticle").onkeydown = (e) => {
   if (e.key === "Enter") {
@@ -66,23 +53,23 @@ if (filter != "value") {
   searchCall();
 }
 function searchNews() {
-  fetch(`https://inshorts.deta.dev/news?category=${filter}`)
+  fetch(`https://saurav.tech/NewsAPI/top-headlines/category/${filter}/in.json`)
     .then((res) => res.json())
     .then((data) => {
       for (var i = 1; i < 11; i++) {
         let newcard = oldcard.cloneNode(true);
 
         newcard.childNodes[1].childNodes[1].src =
-          data.data[i * page].imageUrl;
+          data.articles[i * page].urlToImage;
 
         newcard.childNodes[3].childNodes[1].innerText =
-          data.data[i * page].title;
+          data.articles[i * page].title;
 
         newcard.childNodes[3].childNodes[3].innerText =
-          data.data[i * page].content;
+          data.articles[i * page].description;
 
         newcard.childNodes[3].childNodes[5].childNodes[1].href =
-          data.data[i * page].readMoreUrl;
+          data.articles[i * page].url;
 
         document.getElementById("cardcontainer").appendChild(newcard);
       }
